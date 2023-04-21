@@ -9,10 +9,10 @@ import java.util.Properties;
 // singleton
 public class BoardBuilder {
     private static BoardBuilder instance;
-    private Properties config;
+    private final Properties config;
 
     private BoardBuilder() {
-        config = Config.getConfig();
+        config = Config.getConfig("board");
     }
 
     public static BoardBuilder getInstance() {
